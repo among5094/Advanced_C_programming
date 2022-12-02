@@ -2,8 +2,8 @@
 //구조체04번 - 복소수 덧셈 수행
 struct complex //구조체 선언
 {
-    double real; 
-    double imag; 
+    double real; //실수
+    double imag;  //허수
 };
 
 //구조체 함수
@@ -11,7 +11,7 @@ struct complex complex_add(struct complex x1, struct complex x2);
 
 int main(void)
 {
-    struct complex c1;
+    struct complex c1;//구조체 complex이라는 type의 변수를 선언하고 그 변수를 s라고 부르겠다. 
     struct complex c2;
 
     //복소수의 첫 번째 실,허수 부분
@@ -25,9 +25,10 @@ int main(void)
     scanf("%lf", &c2.real);
     printf("두 번째 복소수의 허수부분: ");
     scanf("%lf", &c2.imag);
-
-    //함수 호출
-    complex_add(c1, c2);
+    
+    complex_add(c1, c2);//함수 호출
+    //함수를 호출할때는 앞에 구조체 선언 안 해줘도 된다.
+    //다른 경우를 생각해봐도 함수 호출할때 변수타입은 선언한적이 없다.
 
     return 0;
 }
