@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//structuretype_1
 //구조체 선언
 struct book123
 {
