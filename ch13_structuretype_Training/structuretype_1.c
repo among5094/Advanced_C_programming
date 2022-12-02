@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 //구조체 선언
-struct book
+struct book123
 {
     int id; 
     char title[100]; //책 제목
@@ -12,7 +12,7 @@ struct book
 
 int main(void)
 {
-    struct book s; //구조체 book이라는 type에 변수를 선언하고 그 변수를 s라고 부르겠다. 
+    struct book123 s; //구조체 book이라는 type에 변수를 선언하고 그 변수를 s라고 부르겠다. 
 
     //구조체 초기화
     s.id=1;
