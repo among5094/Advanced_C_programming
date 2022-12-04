@@ -1,5 +1,5 @@
 #include <stdio.h>
-//구조체 문제6번 - 구조체 포인터
+//구조체 문제7번 - 점에 속하는 사분면 출력
 struct point { int x, y; };
 
 int equal(struct point *p1);
