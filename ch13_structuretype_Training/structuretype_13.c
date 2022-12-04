@@ -12,7 +12,7 @@ struct shape{
 
 int main(void)
 {
-    struct shape 
+    
 
 
 }
