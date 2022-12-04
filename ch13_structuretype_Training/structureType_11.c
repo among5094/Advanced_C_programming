@@ -32,7 +32,6 @@ int main(void)
             printf("집전화번호: %s\n휴대폰번호: %s\n", arr[i].home_number, arr[i].phone_number);
               
     }
-    
 
     return 0;
 }
