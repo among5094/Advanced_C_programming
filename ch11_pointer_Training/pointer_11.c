@@ -52,12 +52,9 @@ int main(void)
     }
 
     //합병된 배열 Carar 보여주기
-    
     for(int i=0;i<size;i++)
         printf("%d ", C[i]);
     printf("}\n");
-
-    
 
 }
 
