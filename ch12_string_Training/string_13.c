@@ -14,3 +14,7 @@ int main(void)
     printf("구두점의 개수는 %d입니다.\n", count);
     return 0;
 }
+
+//다른 방법
+//for(int i=0; i<strlen(s) ; i++)
+//헤더파일 #include <string.h>
