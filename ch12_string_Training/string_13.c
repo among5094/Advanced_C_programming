@@ -8,7 +8,7 @@ int main(void)
     gets(s);
     for(int i=0; s[i] != NULL ; i++)
     {
-        if(s[i]==',' || s[i]=='.')
+        if(s[i]=='.' || s[i]==',')
             count++;
     }
     printf("구두점의 개수는 %d입니다.\n", count);
