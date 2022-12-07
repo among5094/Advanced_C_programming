@@ -14,7 +14,8 @@ int main(void)
     return 0;
 }
 
-void set_pointer(char **q){
+void set_pointer(char **q)//이중포인터 q를 통해서 "외부의"포인터 p를 변경한다. 
+{
     *q="All that glisters is not gold.";
 }
 /*
