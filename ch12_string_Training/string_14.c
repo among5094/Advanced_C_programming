@@ -32,9 +32,11 @@ int main()
 strstr()함수에 대해...
 strstr함수를 사용하면 대상 문자열에서 찾고자 하는 문자열을 발견하면 해당 위치의 "주소값"을 반환하고 종료됩니다.
 
-링크: 
+참고할 코드 링크(정답링크): 
 https://inhwascope.tistory.com/93
 
+토큰 함수에 대한 도움되는 링크(문제를 해결하기 위해 읽어보면 좋음):
+https://kingmaron.tistory.com/160
 
 
 */
