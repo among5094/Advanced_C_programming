@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-// 14장 - 이중포인터  1번
-
+// 14장 - 이중포인터  1번: 속담 출력
+//코드참고: https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=kbc91&logNo=220623922237
 void set_proverb(char **q, int n);
 // 외부의 포인터 값을 변경해야 하므로 이중 포인터 매개변수를 가진다.
 
@@ -37,6 +37,7 @@ void set_proverb(char **q, int n)
         "9. 사공이 많으면 배가 산으로 간다.",
         "10. 천 리 길도 한 걸음부터."
 
-    };
+    }; //이 세미콜론 까먹어서 계속 틀림
+
     *q = str[n-1];
 }
