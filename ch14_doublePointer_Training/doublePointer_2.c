@@ -1,16 +1,15 @@
 #include <stdio.h>
 #include <string.h>
 // 14장 - 이중포인터  2번: 
-//https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=kbc91&logNo=220623922237
 
 int get_sum(int array[], int size);
 
 int main(void)
 {
     //이차원배열에 덧셈 저장하기
-    int arr[3][5] = {{10,20,30,40,50},
-                     {1,2,3,4,5},
-                     {11,22,33,44,55}};
+    int arr[3][5] = {{10,20,30,40,50}, //150
+                     {1,2,3,4,5}, //15
+                     {11,22,33,44,55}}; //165
 
     int (*pst)[5]=arr; // 배열 포인터 선언 시 [] <- 들어가는 값은 2차원 배열의 열 크기와 동일해야함
     
