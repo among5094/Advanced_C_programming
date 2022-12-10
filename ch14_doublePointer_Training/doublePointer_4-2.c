@@ -1,9 +1,11 @@
 #include <stdio.h>
-//이중 포인터 ch14장
+
+//저장된 문자열을 전부 출력하는 함수 선언
+void pr_str_array(char **dp, int n);
 
 int main(void)
 {
-    char *arr[] = {
+    char *arr[10] = {
         "A bad shearer never had a good sickle.",
         "A bad workman (always) blames his tools.",
         "A bad workman quarrels with his tools.",
@@ -16,11 +18,17 @@ int main(void)
         "A bad thing never dies."
     };
 
-    //배열 원소 개수 계산
-    int num = sizeof(arr)/sizeof(arr[0]);
+    pr_str_array(arr, 10);//함수 호출
 
-    for(int col=0; col<num ; col++)
-        printf("%s \n", *(arr+col));
-        
     return 0;
 }
+
+void pr_str_array(char **dp, int n)
+{
+    //출력부분
+    for (int i=0;i<n;i++)
+        printf("%s\n", dp[i]);
+
+ }
+
+ 
