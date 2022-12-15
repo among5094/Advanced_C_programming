@@ -15,20 +15,20 @@ int main(void)
     char file1[100], file2[100];
 
     printf("첫 번째 파일 이름: ");
-    scanf("%s", &file1);
+    scanf("%s", file1);
     printf("두 번째 파일 이름: ");
-    scanf("%s", &file2);
+    scanf("%s", file2);
 
-    //첫 번째 파일 읽기 모드
-    if(fp1 = fopen(file1, "r") == NULL)
+    //첫 번째 파일 읽기 모드로 열기
+    if((fp1 = fopen(file1, "r")) == NULL)
     {
         fprintf(stderr, "원본 파일 %s를 열 수 없다. \n", file1);
         exit(1); //에러시 강제 종료
 
     }
 
-    //두 번째 파일 읽기 모드
-    if(fp2 = fopen(file2, "r") == NULL)
+    //두 번째 파일 읽기 모드로 열기
+    if((fp2 = fopen(file2, "r")) == NULL)
     {
         fprintf(stderr, "원본 파일 %s를 열 수 없다. \n", file2);
         exit(1); //에러시 강제 종료
@@ -52,7 +52,7 @@ int main(void)
         }
 
     }    
-    
+
         printf("두 파일은 서로 같습니다.\n");
         fclose(fp1); //파일 닫아주기
         fclose(fp2);
