@@ -32,7 +32,6 @@ int main(void)
     {
         fprintf(stderr, "원본 파일 %s를 열 수 없다. \n", file2);
         exit(1); //에러시 강제 종료
-
     }
 
     //첫 번째 파일과 두 번째 파일 비교

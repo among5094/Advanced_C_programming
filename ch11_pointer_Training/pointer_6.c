@@ -21,7 +21,7 @@ void array_copy(int* A, int* B, int size)
     printf(" }\n");
     
     //a를 b에 옮기기
-    printf("A[ ] = { ");
+    printf("B[ ] = { ");
     for(int i=0;i<size;i++)
     {
         B[i] = A[i];
