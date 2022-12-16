@@ -2,13 +2,15 @@
 #include <stdlib.h> //동적메모리 malloc()을 위해서
 //예제2 - 성적 처리 프로그램
 int main(void)
-{
-    int num=0; //입력받을 학생 수
-    int* score;
-    score=(int*)malloc(10*sizeof(int)); //size 10을 동적할당
-
+{ 
+    //학생 수 입력받기
+    int num=0;
     printf("학생의 수: ");
     scanf("%d", &num);
+    
+    int* score=(int*)malloc(num*sizeof(int));
+    //배열의 크기가 num의 크기만큼 할당됨
+    //sizeof(자료형) : 자료형의 크기를 말함.
 
     //성적 받아서 저장
     for(int i=0; i<num; i++)
