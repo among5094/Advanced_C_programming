@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h> //동적메모리 malloc()을 위해서
 //ch17-2번: 길이가 100인 n개의 문자열 구하기
-
+//참고링크: https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=ohsehan96&logNo=220562693868
 int main(void)
 {   
     int n=0;
@@ -9,7 +9,7 @@ int main(void)
 
     printf("문자열 개수: ");
     scanf("%d", &n);
-    
+
     if( (A=(char**)malloc(n*sizeof(char*))) != NULL ) //동적메모리할당
     {
         for(int i=0; i<n; i++)
