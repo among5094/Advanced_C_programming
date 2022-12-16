@@ -15,14 +15,13 @@ typedef struct address_book
 
 int main(void)
 {
-    
     //주소의 개수
     int n;
     printf("주소의 개수:");
     scanf("%d", &n);
 
     //동적할당
-    ADDRESS* address; 
+    ADDRESS* address; //struct address_book* address; 원래 형태
     address=(ADDRESS*)malloc(n*sizeof(ADDRESS));
     
     //오류가 있는지 없는지 검사하는 부분 
@@ -47,9 +46,8 @@ int main(void)
 
     //출력하는 부분
     for(int i=0; i<n; i++)
-    {
         printf("%s\t%s\n",address[i].name,address[i].number);
-    }
+    
 
     return 0;
 }
