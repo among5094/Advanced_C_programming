@@ -3,7 +3,7 @@
 #include <time.h> //매번 rand함수를 다르게 하는 헤더파일
 
 //arr배열의 첫 주소값을 전달받은 배열 A에 rand값을 넣는 함수
-void array_fill(int* A, int size);
+void array__fill(int* A, int size);
 
 int main(void)
 {
@@ -12,12 +12,12 @@ int main(void)
     return 0;
 }
 
-void array_fill(int* A, int size)
+void array__fill(int* A, int size)
 {
     for(int i=0; i<size ; i++)
     {
         A[i]=rand()%100; //0~99까지 생성되는 난수가 배열A[i]에 저장됨
-        printf("%d ", A[i]); //두 가지 방법으로 됨  *(A+i)
+        printf("%d ", *(A+i)); //두 가지 방법으로 됨 A[i] 
     }
     
 }
