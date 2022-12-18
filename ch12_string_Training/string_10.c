@@ -3,7 +3,7 @@
 #include <ctype.h>
 //문자열 10문 - 회문
 
-int palindrome(s);
+int palindrome(char* s);
 
 int main(void)
 {
@@ -15,11 +15,13 @@ int main(void)
     return 0;
 }
 
-int palindrome(s)
+int palindrome(char* s)
 {    
-    for (int i=0 ; i<strlen(s)/2 ;i++) //절반을 기준으로 검사했을 때
+    int len=strlen(s);
+
+    for (int i=0 ; i<len/2 ;i++) //절반을 기준으로 검사했을 때
     {
-        if(s[i] != s[strlen(s)-i-1]) // 처음부터 시작한 문자열과 끝에서 시작한 문자열이 하나라도 다르면?
+        if(s[i] != s[len-i-1]) // 처음부터 시작한 문자열과 끝에서 시작한 문자열이 하나라도 다르면?
         {
             printf("회문이 아님\n"); //회문이 아님
             return 0;
