@@ -1,12 +1,13 @@
 #include <stdio.h>
+#include <string.h>
 
-void frequency(int* str);
 
 int main()
 {
     char str[100]; // 크기 100인 문자열 배열 선언
     char alphabet[26] = {0};
 
+    printf("문자열을 입력하시오: ");
     gets(str); // 공백 포함 문자열 입력받기
 
     // 문자열에서 알파벳 빈도수 체크
