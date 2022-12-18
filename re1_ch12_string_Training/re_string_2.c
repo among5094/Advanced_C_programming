@@ -18,7 +18,7 @@ int main(void)
 
 void Delet_space(char* string) //공백을 삭제하는 함수
 {
-    for(int i=0; string[i] != '\0' ; i++) //계속 틀리는 이유 null을 \0으로 써야하는데 0으로 써서 오류났음 계속
+    for(int i=0; string[i] != '\0' ; i++) //>>계속 틀리는 이유 null을 \0으로 써야하는데 0으로 써서 오류났음 계속<<
         if(string[i] != ' ')
             printf("%c", string[i]);
             //%s이면 오류나고 %c여야 실행됨. 아마 공백을 제거하려면 string가 아니라 char단위로 봐야돼서 그런 것 같다.

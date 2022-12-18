@@ -11,6 +11,7 @@ int main(void)
     char count_c; //몇개인지 알고싶은 변수
 
     //gets함수: 문자열을 입력받는 함수
+    printf("문자열을 입력하시오: ");
     gets(arr_str); //gets는 
 
     //개수를 셀 문자 입력받기
