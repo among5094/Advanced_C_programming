@@ -4,10 +4,10 @@ void arr_copy(int* A, int* B, int size); //배열을 복사하는 함수
 
 int main(void)
 {
-    int A[]={1,2,3,0,0,0,0};
-    int B[]={0};
-    int size=sizeof(A)/sizeof(A[0]); //배열의 크기
-    arr_copy(A,B,size);//배열A의 첫 번째 주소값 전달
+    int arr1[]={1,2,3,0,0,0,0}; //배열 이름이 A이든 arr1이든 결과는 같음!
+    int arr2[]={0};
+    int size=sizeof(arr1)/sizeof(arr1[0]); //배열의 크기
+    arr_copy(arr1,arr2,size);//배열A의 첫 번째 주소값 전달
     return 0;
 }
 
