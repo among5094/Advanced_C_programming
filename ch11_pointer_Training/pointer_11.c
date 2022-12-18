@@ -1,72 +1,62 @@
 #include <stdio.h>
-#include <string.h> //문자열 함수를 위한 헤더파일
 
-//12번 - 2개의 배열을 합쳐서 하나의 정렬된 배열C[]로 만드는 함수 작성
-//pointer free code2번에 있음
-void merge(int* A, int* B, int* C, int size);
+void merge(int* A, int* B, int* C, int size); //더 작은 것을 비교하는 함수
 
 int main(void)
 {
-    int Aarr[4]={2,5,7,8};
-    int Barr[4]={1,3,4,6};
-    int Carr[50];
+    int A[]={2,5,7,8};
+    int B[]={1,3,4,6};
+    int C[8]={0};
+    merge(A,B,C,8);
 
-    //합병하는 함수 호출
-    merge(Aarr, Barr, Carr, 4); 
-
+    // Merge 함수 수행 후 정렬된 배열 C 출력하기
+    printf("C[]={ ");
+    for (int i = 0;i <8; i++)
+        printf("%d ", C[i]);
+    printf("}");
 
     return 0;
-}   
-
- void merge(int* A, int* B, int* C, int size)
-{
-    //원래 배열 Aarr 보여주기
-    printf("A[ ] = { ");
-    for(int i=0;i<size;i++)
-        printf("%d ", A[i]);
-    printf("}\n");
-
-    //원래 배열 Barr 보여주기
-    printf("B[ ] = { ");
-    for(int i=0;i<size;i++)
-        printf("%d ", B[i]);
-    printf("}\n");
-    
-    printf("C[ ] = { ");
-    //배열 Aarr과 Barr 합치는 알고리즘
-    for(int i=0 ; i<50 ; i++)
-    {
-        if(A[i]<B[i])
-        {
-            strcpy(C[i], A[i]);
-            A[i]+1; //배열의 index증가
-            printf("%d ", C[i]);
-        }
-        else if(A[i]>B[i])
-        {
-            strcpy(C[i], B[i]);
-            (B[i]+1);
-            printf("%d ", C[i]);
-        }
-
-    }
-
-    //합병된 배열 Carar 보여주기
-    for(int i=0;i<size;i++)
-        printf("%d ", C[i]);
-    printf("}\n");
-
 }
 
-/*
-포인터형 배열의 index증가 
+void merge(int* A, int* B, int* C, int size)
+{
+    //배열 A보여주기
+    printf("A[]= {");
+    for(int i=0; i<size/2 ; i++)
+        printf("%d ", A[i]);
+    printf("}");
 
-int arr[3]={5, 10, 15}
-*arr >> 5
-*arr+1 >> 6
-*(arr+1) >> 10
+    //배열 B보여주기
+    printf("B[]= {");
+    for(int i=0; i<size/2 ; i++)
+        printf("%d ", B[i]);
+    printf("}");
 
+    //---------더 작은 배열이 있는 부분을 배열c로 옮기는 부분-----
+    int A_index= 0, B_index = 0, C_index = 0; //각각 해당 배열의 인덱스를 의미함
+   
+    while (C_index != size) // c가 배열 C의 마지막 인덱스를 나타낼 때 까지 반복
+    {
+        if (A[A_index] < B[B_index])//만약 A가 더 작으면?
+            C[C_index++] = A[A_index++]; // 해당 원소를 C 배열에 넣고, A와 C의 인덱스는 증가시킨다
+        else if (A[A_index] > B[B_index]) // 만약 B가 더 작으면?
+            C[C_index++] = B[B_index++]; // 해당 원소를 C 배열에 넣는다, 배열 인덱스를 각각 증가시킨다
 
+        //---------먼저 끝나는 배열이 있는 경우의 처리 부분-----
+        
+        //A배열이 먼저 끝났다면?
+        if (A_index == size/2) //A_index는 4이고, size가 8인데 2나누면 4임. 즉 4를 의미함
+        { 
+            while (B_index != size/2) //B 배열이 끝나기 전까지
+                C[C_index++] = B[B_index++]; // B 배열에 남은 요소들을 C 배열에 넣고, 배열 인덱스를 각각 증가시킨다
+        }
+        //B 배열이 먼저 끝났다면?
+        else if (B_index == size/2)
+        {
+            while (A_index != size/2) // A 배열이 끝나기 전까지
+                C[C_index++] = A[A_index++]; // A 배열에 남은 요소들을 C 배열에 넣고, 배열 인덱스를 각각 증가시킨다
+        }
+    }
 
-참고 블로그: https://deftkang.tistory.com/40
-*/
+}
+// A 배열이 먼저 끝났다면? (3번 인덱스까지 C에 넣고 a++을 수행하므로 a는 size/2가 됨)
