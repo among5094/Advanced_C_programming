@@ -12,7 +12,7 @@ int main(void)
 void array_print(int* A, int size)
 {
     printf("A[ ] = { ");
-    for (i = 0; i < size; i++) 
+    for (int i = 0; i < size; i++) 
         printf("%d ", A[i]);
 
     printf(" }\n");
