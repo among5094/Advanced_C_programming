@@ -50,6 +50,7 @@ void merge(int* A, int* B, int* C, int size)
             while (B_index != size/2) //B 배열이 끝나기 전까지
                 C[C_index++] = B[B_index++]; // B 배열에 남은 요소들을 C 배열에 넣고, 배열 인덱스를 각각 증가시킨다
         }
+        
         //B 배열이 먼저 끝났다면?
         else if (B_index == size/2)
         {

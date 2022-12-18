@@ -26,7 +26,6 @@ int main(void)
 int str_chr(char* s, char c) //개수를 세주는 함수
 {
     int count=0; //count_c가 하나씩 나올때마다 1씩 증가해주기
-
     for(int i=0; s[i] != '\0'; i++) //다른 방법: for(int i=0; i<strlen(s) ; i++)
         if( s[i] == c )
             count++;
