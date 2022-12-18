@@ -24,13 +24,13 @@ void merge(int* A, int* B, int* C, int size)
     printf("A[]= {");
     for(int i=0; i<size/2 ; i++)
         printf("%d ", A[i]);
-    printf("}");
+    printf("}\n");
 
     //배열 B보여주기
     printf("B[]= {");
     for(int i=0; i<size/2 ; i++)
         printf("%d ", B[i]);
-    printf("}");
+    printf("}\n");
 
     //---------더 작은 배열이 있는 부분을 배열c로 옮기는 부분-----
     int A_index= 0, B_index = 0, C_index = 0; //각각 해당 배열의 인덱스를 의미함
