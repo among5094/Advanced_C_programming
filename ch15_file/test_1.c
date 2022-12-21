@@ -5,7 +5,7 @@ int main(void)
     int i=23;
     float f=1.2345;
     FILE* fp;
-
+    
     fp = fopen("irr0044.txt", "w"); //파일 읽을게, r은 쓰기모드
 
     if(fp != NULL) //파일을 열었다면?
