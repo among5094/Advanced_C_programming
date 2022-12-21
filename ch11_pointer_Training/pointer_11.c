@@ -42,7 +42,7 @@ void merge(int* A, int* B, int* C, int size)
         else if (A[A_index] > B[B_index]) // 만약 B가 더 작으면?
             C[C_index++] = B[B_index++]; // 해당 원소를 C 배열에 넣는다, 배열 인덱스를 각각 증가시킨다
 
-        //---------먼저 끝나는 배열이 있는 경우의 처리 부분-----
+    //---------먼저 끝나는 배열이 있는 경우의 처리 부분-----
         
         //A배열이 먼저 끝났다면?
         if (A_index == size/2) //A_index는 4이고, size가 8인데 2나누면 4임. 즉 4를 의미함

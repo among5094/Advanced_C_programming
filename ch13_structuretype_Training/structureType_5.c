@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 struct point{
     int x,y;
 };
@@ -10,15 +9,12 @@ int main(void)
 {
     struct point one,two; //one: 처음 입력받을 좌표, twe: 두 번째 입력받을 좌표
 
-    //입력받는 부분
-    printf("Enter the first coordinates (x-axis, y-axis): ");//첫 번째 좌표의 x축, y축
+    printf("첫 번재 좌표 입력:");//첫 번째 좌표의 x축, y축
     scanf("%d %d", &one.x, &one.y);
-    printf("Enter the second coordinates (x-axis, y-axis): ");//두 번째 좌표의 x축, y축
+    printf("두 번째 좌표 입력");//두 번째 좌표의 x축, y축
     scanf("%d %d", &two.x, &two.y);
 
-
-    //함수를 이용해서 값을 출력해주기
-    if(equal(one,two)==1)//Is it true?
+    if(equal(one,two)==1)//함수를 이용해서 값을 출력해주기
         printf("(%d, %d) == (%d, %d)", one.x, one.y, two.x, two.y);
     else if(equal(one,two)==0)
         printf("(%d, %d) != (%d, %d)", one.x, one.y, two.x, two.y);

@@ -1,20 +1,16 @@
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h>
+#include <ctype.h> //회문
 
 int palindrome(char* s);
 
 int main(void)
 {
     char s[100];
-
     printf("문자열 입력");
     scanf("%s", s);
-
     palindrome(s);
-
     return 0;
-
 }
 
 int palindrome(char* s)

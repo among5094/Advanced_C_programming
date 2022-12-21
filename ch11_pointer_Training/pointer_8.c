@@ -1,6 +1,4 @@
-#include <stdio.h>
-
-//c언어 express 11강 포인터 - 8번: 지급한 월급의 총액
+#include <stdio.h>//c언어 express 11강 포인터 - 8번: 지급한 월급의 총액
 
 void array_sum(int* A, int size);
 

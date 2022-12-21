@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h>
+#include <string.h> //4번- 빈도수 출력
 
 int main()
 {
