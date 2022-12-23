@@ -15,24 +15,13 @@ int main()
 	member* sp; //구조체 포인터 선언
 	FILE* fp; //파일 포인터를 선언한다.
 	fp = fopen("test_1.txt", "w"); //test_1.txt를 쓰기용으로 연다.
-
+	/*
 	printf("회원가입 몇 명?: ");
 	scanf("%d", &num);
 
 	sp=(member*)malloc(num*sizeof(member*));
-	
-
-	for(int i=0; i<num;i++){
-
-	printf("가입할 ID입력: \n");
-	fgets(sp->id, sizeof(sp->id), stdin); //문자열을 입력받는다.
-	fputs(sp->id, fp); //받은 문자열 id를 fp포인터가 가르키고 있는 곳에 넣는다.
-
-	printf("가입할 PAS입력: \n");
-	fgets(sp->pas, sizeof(sp->pas), stdin); //문자열을 입력받는다.
-	fputs(sp->pas, fp); //받은 문자열 pas를 fp포인터가 가르키고 있는 곳에 넣는다.
-
-	}
+	*/
+	fscanf(fp,"%s ", sp->id);
 	
 	fclose(fp); //파일을 닫는다.
 	return 0;
